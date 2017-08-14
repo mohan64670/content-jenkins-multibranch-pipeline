@@ -38,6 +38,7 @@ pipeline {
         echo "Merging Development into Master"
         sh 'git merge development'
         echo "Git Push to Origin"
+	sh 'git config remote.url "https://github.com/linuxacademy/content-jenkins-multibranch-pipeline.git"'
         sh 'git push origin master'
       }
       post {
